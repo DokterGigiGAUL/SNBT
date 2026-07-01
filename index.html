@@ -14,25 +14,21 @@
         <h1>AI Tutor SNBT</h1>
         <p>Pilih akun untuk masuk</p>
 
-        <form id="loginForm">
+<form id="loginForm">
 
-            <label class="user-option">
-                <input type="radio" name="user" value="1" checked>
-                <span>Afwan</span>
-                <small>Target: Teknik Elektro ITB</small>
-            </label>
+    <div id="userList"></div>
 
-            <label class="user-option">
-                <input type="radio" name="user" value="2">
-                <span>Athar</span>
-                <small>Target: FKG Unpad</small>
-            </label>
+    <button type="submit" id="loginButton">
 
-            <button type="submit" id="loginButton">
-                Masuk
-            </button>
+        Masuk
 
-        </form>
+    </button>
+
+</form>
+
+<script src="data/users.js"></script>
+
+<script src="script.js"></script>
 
     </div>
 
