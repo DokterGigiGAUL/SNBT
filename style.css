@@ -36,7 +36,9 @@ body {
 }
 
 .user-option {
-    display: block;
+    display: flex;         /* ← ganti ke flex */
+    align-items: center;   /* ← radio sejajar vertikal */
+    gap: 12px;             /* ← jarak radio ke teks */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
@@ -51,7 +53,10 @@ body {
 }
 
 .user-option input {
-    margin-right: 10px;
+    flex-shrink: 0;   /* ← tambahkan ini */
+    margin: 0;        /* ← hapus default margin browser */
+    width: 18px;
+    height: 18px;
 }
 
 .user-option span {
