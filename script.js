@@ -7,16 +7,17 @@ users.forEach((user, index) => {
     label.className = "user-option";
 
     label.innerHTML = `
-        <input
-            type="radio"
-            name="user"
-            value="${user.id}"
-            ${index === 0 ? "checked" : ""}
-        >
-
+    <input
+        type="radio"
+        name="user"
+        value="${user.id}"
+        ${index === 0 ? "checked" : ""}
+    >
+    <div class="user-info">
         <span>${user.nama}</span>
         <small>Target: ${user.target}</small>
-    `;
+    </div>
+`;
 
     userList.appendChild(label);
 
