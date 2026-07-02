@@ -7,31 +7,50 @@ users.forEach((user, index) => {
     label.className = "user-option";
 
     label.innerHTML = `
-        <input
-            type="radio"
-            name="user"
-            value="${user.id}"
-            ${index === 0 ? "checked" : ""}
-        >
+<div class="user-header">
 
-        <span>${user.nama}</span>
-        <small>Target: ${user.target}</small>
-    `;
+<input
+type="radio"
+name="user"
+value="${user.id}"
+${index===0 ? "checked" : ""}
+>
+
+<span>${user.nama}</span>
+
+</div>
+
+<input
+type="text"
+class="target-input"
+placeholder="Pilihan Fakultas & Universitas"
+id="target-${user.id}"
+>
+`;
+    
 
     userList.appendChild(label);
 
 });
 
 // Login
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+document
+.getElementById("loginForm")
+.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const selectedUser =
-        document.querySelector('input[name="user"]:checked').value;
+    const radio =
+    document.querySelector('input[name="user"]:checked');
 
-    localStorage.setItem("activeUser", selectedUser);
+    const id = radio.value;
 
-    window.location.href = "pages/dashboard.html";
+    const target =
+    document.getElementById(`target-${id}`).value;
+
+    localStorage.setItem("activeUser", id);
+    localStorage.setItem("targetPilihan", target);
+
+    window.location.href="dashboard.html";
 
 });
