@@ -50,6 +50,8 @@ const user = users.find(u => u.id === userId);
 document.getElementById("namaUser").textContent =
     "Halo, " + user.nama;
 
+const target = localStorage.getItem("targetPilihan");
+
 document.getElementById("targetUser").textContent =
     "Calon mahasiswa " + user.target;
 
