@@ -52,6 +52,6 @@ document
     localStorage.setItem("activeUser", id);
     localStorage.setItem("targetPilihan", target);
 
-    window.location.href="dashboard.html";
+    window.location.href="pages/dashboard.html";
 
 });
