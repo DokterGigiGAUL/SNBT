@@ -17,7 +17,7 @@
 
     <p id="targetUser"></p>
 
-        <div class="menu-grid">
+    <div class="menu-grid">
 
         <button class="menu-button">📘 Materi</button>
 
@@ -39,37 +39,26 @@
 
 <script>
 
-const userId = localStorage.getItem("activeUser");
-
-const users = {
-    1: {
-        nama: "Afwan",
-        target: "Teknik Elektro ITB"
-    },
-    2: {
-        nama: "Athar",
-        target: "FKG Unpad"
-    }
-};
+const userId = Number(localStorage.getItem("activeUser"));
 
 if (!userId) {
     window.location.href = "../index.html";
 }
 
+const user = users.find(u => u.id === userId);
+
 document.getElementById("namaUser").textContent =
-    "Halo, " + users[userId].nama;
-
-const user = users[userId];
-
-const target =
-    localStorage.getItem(`target_${userId}`) || user.target;
+    "Halo, " + user.nama;
 
 document.getElementById("targetUser").textContent =
-    "Calon Mahasiwa " + target;
+    "Target: " + user.target;
 
 document.getElementById("logoutButton").addEventListener("click", function () {
+
     localStorage.removeItem("activeUser");
+
     window.location.href = "../index.html";
+
 });
 
 </script>
