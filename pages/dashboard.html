@@ -9,13 +9,49 @@
 </head>
 <body>
 
-    <div class="login-card">
+<div class="login-card">
 
-        <h1>Dashboard</h1>
+    <h1>Dashboard</h1>
 
-        <p>Selamat datang di AI Tutor SNBT</p>
+    <h2 id="namaUser"></h2>
 
-    </div>
+    <p id="targetUser"></p>
+
+    <button id="logoutButton">Keluar</button>
+
+</div>
+
+<script>
+
+const userId = localStorage.getItem("activeUser");
+
+const users = {
+    1: {
+        nama: "Afwan",
+        target: "Teknik Elektro ITB"
+    },
+    2: {
+        nama: "Athar",
+        target: "FKG Unpad"
+    }
+};
+
+if (!userId) {
+    window.location.href = "../index.html";
+}
+
+document.getElementById("namaUser").textContent =
+    "Halo, " + users[userId].nama;
+
+document.getElementById("targetUser").textContent =
+    "Target: " + users[userId].target;
+
+document.getElementById("logoutButton").addEventListener("click", function () {
+    localStorage.removeItem("activeUser");
+    window.location.href = "../index.html";
+});
+
+</script>
 
 </body>
 </html>
