@@ -15,7 +15,7 @@ users.forEach((user, index) => {
     >
 
     <div class="user-info">
-        <span style="line-spacing:1;">${user.nama}</span>
+        <span style="line-height:1.2;">${user.nama}</span>
 
         <small>Pilihan fakultas: <input
             type="text"
