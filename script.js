@@ -13,9 +13,16 @@ users.forEach((user, index) => {
         value="${user.id}"
         ${index === 0 ? "checked" : ""}
     >
+
     <div class="user-info">
         <span>${user.nama}</span>
-        <small>Target: ${user.target}</small>
+
+        <input
+            type="text"
+            class="target-input"
+            id="target-${user.id}"
+            value="${user.target}"
+        >
     </div>
 `;
 
@@ -29,10 +36,14 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const selectedUser =
-        document.querySelector('input[name="user"]:checked').value;
+    document.querySelector('input[name="user"]:checked').value;
 
-    localStorage.setItem("activeUser", selectedUser);
+const target =
+    document.getElementById(`target-${selectedUser}`).value;
 
-    window.location.href = "pages/dashboard.html";
+localStorage.setItem("activeUser", selectedUser);
+localStorage.setItem(`target_${selectedUser}`, target);
+
+window.location.href = "pages/dashboard.html";
 
 });
