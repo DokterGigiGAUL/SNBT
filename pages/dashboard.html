@@ -43,8 +43,11 @@ if (!userId) {
 document.getElementById("namaUser").textContent =
     "Halo, " + users[userId].nama;
 
+const target =
+    localStorage.getItem(`target_${user.id}`) || user.target;
+
 document.getElementById("targetUser").textContent =
-    "Target: " + users[userId].target;
+    "Target: " + target;
 
 document.getElementById("logoutButton").addEventListener("click", function () {
     localStorage.removeItem("activeUser");
