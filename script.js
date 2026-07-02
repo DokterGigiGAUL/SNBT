@@ -6,29 +6,30 @@ users.forEach((user, index) => {
     const label = document.createElement("label");
     label.className = "user-option";
 
-    label.innerHTML = `
+label.innerHTML = `
 <div class="user-header">
 
-<input
-type="radio"
-name="user"
-value="${user.id}"
-${index===0 ? "checked" : ""}
->
+    <input
+        type="radio"
+        name="user"
+        value="${user.id}"
+        ${index === 0 ? "checked" : ""}
+    >
 
-<span>${user.nama}</span>
+    <span>${user.nama}</span>
 
 </div>
 
+<label class="target-label">Pilihan:</label>
+
 <input
-type="text"
-class="target-input"
-placeholder="Pilihan Fakultas & Universitas"
-id="target-${user.id}"
+    type="text"
+    class="target-input"
+    id="target-${user.id}"
+    placeholder="Fakultas & Universitas"
+    value="${user.id == 1 ? "Teknik Elektro ITB" : "FKG Unpad"}"
 >
 `;
-    
-
     userList.appendChild(label);
 
 });
