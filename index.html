@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimbingan AI Sukses SNBT</title>
+    <title>AI Tutor SNBT</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,25 +14,29 @@
         <h1>AI Tutor SNBT</h1>
         <p>Pilih akun untuk masuk</p>
 
-<form id="loginForm">
+        <form id="loginForm">
 
-    <div id="userList"></div>
+            <label class="user-option">
+                <input type="radio" name="user" value="1" checked>
+                <span>Afwan</span>
+                <small>Target: Teknik Elektro ITB</small>
+            </label>
 
-    <button type="submit" id="loginButton">
+            <label class="user-option">
+                <input type="radio" name="user" value="2">
+                <span>Athar</span>
+                <small>Target: FKG Unpad</small>
+            </label>
 
-        Masuk
+            <button type="submit" id="loginButton">
+                Masuk
+            </button>
 
-    </button>
-
-</form>
-
-<script src="data/users.js"></script>
-
-<script src="script.js"></script>
+        </form>
 
     </div>
 
-
+    <script src="script.js"></script>
 
 </body>
 </html>
