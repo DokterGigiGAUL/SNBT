@@ -88,11 +88,11 @@ button:hover {
 }
 
 .logoutButton {
-    background: #990000;
+    background: #cc0000;
 }
 
 .logoutButton:hover {
-    background: #880000;
+    background: #990000;
 }
 
 .menu-grid {
