@@ -80,11 +80,11 @@ button:hover {
     background: #1d4ed8;
 }
 
-logoutButton {
+.logoutButton {
     background: #990000;
 }
 
-logoutButton:hover {
+.logoutButton:hover {
     background: #880000;
 }
 
