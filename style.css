@@ -80,6 +80,14 @@ button:hover {
     background: #1d4ed8;
 }
 
+logoutButton {
+    background: #990000;
+}
+
+logoutButton:hover {
+    background: #880000;
+}
+
 .menu-grid {
     display: grid;
     gap: 12px;
