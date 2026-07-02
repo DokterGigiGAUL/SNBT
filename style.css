@@ -29,10 +29,6 @@ body {
     color: #2563eb;
 }
 
-.login-card h2 {
-    text-align: center;
-}
-
 .login-card p {
     text-align: center;
     margin-bottom: 30px;
@@ -40,9 +36,7 @@ body {
 }
 
 .user-option {
-    display: flex;         /* ← ganti ke flex */
-    align-items: center;   /* ← radio sejajar vertikal */
-    gap: 12px;             /* ← jarak radio ke teks */
+    display: block;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
@@ -56,11 +50,8 @@ body {
     border-color: #2563eb;
 }
 
-.user-option input[type="radio"] {
-    flex-shrink: 0;
-    margin: 0;
-    width: 18px;
-    height: 18px;
+.user-option input {
+    margin-right: 10px;
 }
 
 .user-option span {
@@ -71,21 +62,6 @@ body {
 
 .user-option small {
     color: #666;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.target-input {
-    width: 100%;
-    margin-top: 8px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    height: auto;
 }
 
 button {
@@ -102,14 +78,4 @@ button {
 
 button:hover {
     background: #1d4ed8;
-}
-
-.menu-grid {
-    display: grid;
-    gap: 12px;
-    margin: 25px 0;
-}
-
-.menu-button {
-    width: 100%;
 }
