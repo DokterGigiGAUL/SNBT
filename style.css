@@ -108,3 +108,12 @@ border-radius:8px;
 font-size:15px;
 
 }
+
+.target-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+}
+
