@@ -1,5 +1,9 @@
-document.getElementById("loginForm").addEventListener("submit", function(e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    console.log("Tombol Masuk diklik");
+    const selectedUser = document.querySelector('input[name="user"]:checked').value;
+
+    localStorage.setItem("activeUser", selectedUser);
+
+    window.location.href = "pages/dashboard.html";
 });
