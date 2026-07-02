@@ -9,59 +9,13 @@
 </head>
 <body>
 
-<div class="login-card">
+    <div class="login-card">
 
-    <h1>Dashboard</h1>
+        <h1>Dashboard</h1>
 
-    <h2 id="namaUser"></h2>
-
-    <p id="targetUser"></p>
-
-    <div class="menu-grid">
-
-        <button class="menu-button">📘 Materi</button>
-
-        <button class="menu-button">📝 Latihan</button>
-
-        <button class="menu-button">🎯 Simulasi</button>
-
-        <button class="menu-button">📊 Statistik</button>
-
-        <button class="menu-button">⚙️ Pengaturan</button>
+        <p>Selamat datang di AI Tutor SNBT</p>
 
     </div>
-
-    <button id="logoutButton">Keluar</button>
-
-</div>
-
-<script src="../data/users.js"></script>
-
-<script>
-
-const userId = Number(localStorage.getItem("activeUser"));
-
-if (!userId) {
-    window.location.href = "../index.html";
-}
-
-const user = users.find(u => u.id === userId);
-
-document.getElementById("namaUser").textContent =
-    "Halo, " + user.nama;
-
-document.getElementById("targetUser").textContent =
-    "Target: " + user.target;
-
-document.getElementById("logoutButton").addEventListener("click", function () {
-
-    localStorage.removeItem("activeUser");
-
-    window.location.href = "../index.html";
-
-});
-
-</script>
 
 </body>
 </html>
