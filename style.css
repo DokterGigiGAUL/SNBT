@@ -103,3 +103,13 @@ button {
 button:hover {
     background: #1d4ed8;
 }
+
+.menu-grid {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.menu-button {
+    width: 100%;
+}
