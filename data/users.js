@@ -1,12 +1,10 @@
 const users = [
     {
         id: 1,
-        nama: "Afwan",
-        target: "Teknik Elektro ITB"
+        nama: "Afwan"
     },
     {
         id: 2,
-        nama: "Athar",
-        target: "FKG Unpad"
+        nama: "Athar"
     }
 ];
