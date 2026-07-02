@@ -9,34 +9,26 @@
 </head>
 <body>
 
-    <div class="login-card">
+<div class="login-card">
 
-        <h1>AI Tutor SNBT</h1>
-        <p>Pilih akun untuk masuk</p>
+    <h1>AI Tutor SNBT</h1>
 
-        <form id="loginForm">
+    <p>Pilih akun untuk masuk</p>
 
-            <label class="user-option">
-                <input type="radio" name="user" value="1" checked>
-                <span>Afwan</span>
-                <small>Target: Teknik Elektro ITB</small>
-            </label>
+    <form id="loginForm">
 
-            <label class="user-option">
-                <input type="radio" name="user" value="2">
-                <span>Athar</span>
-                <small>Target: FKG Unpad</small>
-            </label>
+        <div id="userList"></div>
 
-            <button type="submit" id="loginButton">
-                Masuk
-            </button>
+        <button type="submit">
+            Masuk
+        </button>
 
-        </form>
+    </form>
 
-    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="data/users.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
