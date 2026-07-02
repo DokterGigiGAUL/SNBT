@@ -78,6 +78,15 @@ body {
     flex-direction: column;
 }
 
+.target-input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
 button {
     width: 100%;
     padding: 14px;
