@@ -17,12 +17,13 @@ users.forEach((user, index) => {
     <div class="user-info">
         <span>${user.nama}</span>
 
-        <input
+        <small>Pilihan fakultas: <input
             type="text"
             class="target-input"
             id="target-${user.id}"
             value="${user.target}"
         >
+        </small>
     </div>
 `;
 
