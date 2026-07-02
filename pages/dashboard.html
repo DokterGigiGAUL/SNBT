@@ -43,8 +43,10 @@ if (!userId) {
 document.getElementById("namaUser").textContent =
     "Halo, " + users[userId].nama;
 
+const user = users[userId];
+
 const target =
-    localStorage.getItem(`target_${user.id}`) || user.target;
+    localStorage.getItem(`target_${userId}`) || user.target;
 
 document.getElementById("targetUser").textContent =
     "Target: " + target;
