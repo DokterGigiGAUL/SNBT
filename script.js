@@ -27,7 +27,7 @@ label.innerHTML = `
     class="target-input"
     id="target-${user.id}"
     placeholder="Fakultas & Universitas"
-    value="${user.id == 1 ? "Teknik Elektro ITB" : "FKG Unpad"}"
+    value="${user.id == 1 ? "FKG Unpad" : "FKG Unpad"}"
 >
 `;
     userList.appendChild(label);
