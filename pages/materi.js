@@ -1,10 +1,23 @@
-const kompetensiList =
-document.getElementById("kompetensiList");
+const kompetensiTabs =
+document.getElementById("kompetensiTabs");
+
+const kategoriTabs =
+document.getElementById("kategoriTabs");
 
 const subkompetensiList =
 document.getElementById("subkompetensiList");
 
 let activeKompetensi = null;
+let activeKategori = null;
+
+const kategoriMap = {
+
+    "L":"Logika",
+    "A":"Analitik",
+    "D":"Diagram",
+    "I":"Informasi"
+
+};
 
 init();
 
@@ -12,7 +25,7 @@ function init(){
 
     renderKompetensi();
 
-    if(blueprint.length > 0){
+    if(blueprint.length){
 
         pilihKompetensi(
             blueprint[0].id
@@ -24,31 +37,21 @@ function init(){
 
 function renderKompetensi(){
 
-    kompetensiList.innerHTML="";
+    kompetensiTabs.innerHTML="";
 
-    blueprint.forEach((kompetensi)=>{
+    blueprint.forEach(k=>{
 
-        const button =
-        document.createElement("button");
+        const btn=document.createElement("button");
 
-        button.className =
-        "kompetensi-button";
+        btn.textContent=k.nama;
 
-        button.textContent =
-        kompetensi.nama;
+        btn.className="tab-button";
 
-        button.onclick=()=>{
+        btn.id="kom-"+k.id;
 
-            pilihKompetensi(
-                kompetensi.id
-            );
+        btn.onclick=()=>pilihKompetensi(k.id);
 
-        };
-
-        button.id=
-        "btn-"+kompetensi.id;
-
-        kompetensiList.appendChild(button);
+        kompetensiTabs.appendChild(btn);
 
     });
 
@@ -59,29 +62,45 @@ function pilihKompetensi(id){
     activeKompetensi=id;
 
     document
-    .querySelectorAll(".kompetensi-button")
-    .forEach(btn=>{
-
-        btn.classList.remove("active");
-
-    });
+    .querySelectorAll("#kompetensiTabs .tab-button")
+    .forEach(b=>b.classList.remove("active"));
 
     document
-    .getElementById("btn-"+id)
+    .getElementById("kom-"+id)
     .classList.add("active");
 
     const data=
     blueprint.find(k=>k.id===id);
 
-    renderSubkompetensi(data);
+    renderKategori(data);
 
 }
 
-function renderSubkompetensi(data){
+function renderKategori(data){
 
-    subkompetensiList.innerHTML="";
+    kategoriTabs.innerHTML="";
 
-    if(data.subkompetensi.length===0){
+    const grup={};
+
+    data.subkompetensi.forEach(item=>{
+
+        const kode=
+        item.id.split("-")[1][0];
+
+        if(!grup[kode]){
+
+            grup[kode]=[];
+
+        }
+
+        grup[kode].push(item);
+
+    });
+
+    const keys=
+    Object.keys(grup);
+
+    if(keys.length===0){
 
         subkompetensiList.innerHTML=
         "<p class='placeholder'>Materi belum tersedia.</p>";
@@ -90,7 +109,59 @@ function renderSubkompetensi(data){
 
     }
 
-    data.subkompetensi.forEach(item=>{
+    keys.forEach(k=>{
+
+        const btn=
+        document.createElement("button");
+
+        btn.className="tab-button";
+
+        btn.textContent=
+        kategoriMap[k] || k;
+
+        btn.id="kat-"+k;
+
+        btn.onclick=()=>{
+
+            pilihKategori(
+                k,
+                grup[k]
+            );
+
+        };
+
+        kategoriTabs.appendChild(btn);
+
+    });
+
+    pilihKategori(
+        keys[0],
+        grup[keys[0]]
+    );
+
+}
+
+function pilihKategori(kode,list){
+
+    activeKategori=kode;
+
+    document
+    .querySelectorAll("#kategoriTabs .tab-button")
+    .forEach(b=>b.classList.remove("active"));
+
+    document
+    .getElementById("kat-"+kode)
+    .classList.add("active");
+
+    renderSubkompetensi(list);
+
+}
+
+function renderSubkompetensi(list){
+
+    subkompetensiList.innerHTML="";
+
+    list.forEach(item=>{
 
         const card=
         document.createElement("div");
@@ -108,30 +179,17 @@ function renderSubkompetensi(data){
 
         card.onclick=()=>{
 
-            pilihSubkompetensi(item);
+            localStorage.setItem(
+                "activeMateri",
+                item.id
+            );
+
+            alert(item.nama);
 
         };
 
         subkompetensiList.appendChild(card);
 
     });
-
-}
-
-function pilihSubkompetensi(item){
-
-    localStorage.setItem(
-        "activeMateri",
-        item.id
-    );
-
-    alert(
-        item.id+
-        "\n"+
-        item.nama+
-        "\n\nSiap menuju Ringkasan Materi."
-    );
-
-    // window.location.href="ringkasan.html";
 
 }
