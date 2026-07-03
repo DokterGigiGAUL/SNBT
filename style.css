@@ -143,3 +143,53 @@ font-size:15px;
 .kompetensi-card:hover{
     transform:scale(1.02);
 }
+
+.materi-page{
+max-width:700px;
+}
+
+.divider{
+margin:20px 0;
+border:none;
+border-top:1px solid #ddd;
+}
+
+.kompetensi-button{
+margin-bottom:10px;
+}
+
+.kompetensi-button.active{
+background:#0f766e;
+}
+
+.subkompetensi-card{
+background:white;
+padding:16px;
+margin-bottom:12px;
+border-radius:10px;
+border:1px solid #ddd;
+cursor:pointer;
+transition:.2s;
+}
+
+.subkompetensi-card:hover{
+transform:scale(1.02);
+border-color:#2563eb;
+}
+
+.subkompetensi-card strong{
+font-size:15px;
+color:#2563eb;
+display:block;
+margin-bottom:6px;
+}
+
+.subkompetensi-card p{
+margin:0;
+}
+
+.placeholder{
+text-align:center;
+color:#777;
+padding:25px;
+}
