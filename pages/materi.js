@@ -10,14 +10,6 @@ document.getElementById("subkompetensiList");
 let activeKompetensi = null;
 let activeKategori = null;
 
-const kategoriMap = {
-
-    "L":"Logika",
-    "A":"Analitik",
-    "D":"Diagram",
-    "I":"Informasi"
-
-};
 
 init();
 
@@ -116,8 +108,15 @@ function renderKategori(data){
 
         btn.className="tab-button";
 
-        btn.textContent=
-        kategoriMap[k] || k;
+        const kategori =
+        data.kategori.find(
+        item => item.kode === k
+        );
+
+        btn.textContent =
+        kategori
+        ? kategori.nama
+        : k;
 
         btn.id="kat-"+k;
 
