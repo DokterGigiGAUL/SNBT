@@ -183,7 +183,8 @@ function renderSubkompetensi(list){
                 item.id
             );
 
-            alert(item.nama);
+            window.location.href =
+            "ringkasan.html";
 
         };
 
