@@ -76,10 +76,10 @@ const blueprint = [
     },
 
     {
-    id:"PM",
-    nama:"Penalaran Matematika",
+        id:"PM",
+        nama:"Penalaran Matematika",
 
-    kategori:[
+        kategori:[
 
         {
             kode:"A",
@@ -106,22 +106,23 @@ const blueprint = [
     },
 
     {
-    id: "LI",
-    nama: "Literasi Bahasa Indonesia",
-    kategori:[
+        id: "LI",
+        nama: "Literasi Bahasa Indonesia",
+        
+        kategori:[
 
-    {
-        kode:"T",
-        nama:"Teks"
-    },
+        {
+            kode:"T",
+            nama:"Teks"
+        },
 
-    {
-        kode:"B",
-        nama:"Bahasa"
-    }
+        {
+            kode:"B",
+            nama:"Bahasa"
+        }
 
-    ],
-        subkompetensi: []
+        ],
+    subkompetensi: []
     },
 
     {
@@ -130,17 +131,18 @@ const blueprint = [
 
         kategori:[
 
-    {
-        kode:"T",
-        nama:"Teks"
-    },
+        {
+            kode:"T",
+            nama:"Teks"
+        },
 
-    {
-        kode:"B",
-        nama:"Bahasa"
-    }
+        {
+            kode:"B",
+            nama:"Bahasa"
+        }
     ],
-        subkompetensi: []
+        
+    subkompetensi: []
     },
 
     {
