@@ -13,37 +13,24 @@ const blueprint = [
         kategori:[
 
         {
-
             kode:"L",
-
             nama:"Logika"
-
         },
 
         {
-
             kode:"A",
-
             nama:"Analitik"
-
         },
 
         {
-
             kode:"D",
-
             nama:"Diagram"
-
         },
 
         {
-
             kode:"I",
-
             nama:"Informasi"
-
         }
-
     ],
 
     subkompetensi:[
@@ -113,16 +100,15 @@ const blueprint = [
             kode:"P",
             nama:"Peluang"
         }
-
     ],
 
     subkompetensi:[]
-},
+    },
 
     {
-        id: "LI",
-        nama: "Literasi Bahasa Indonesia",
-kategori:[
+    id: "LI",
+    nama: "Literasi Bahasa Indonesia",
+    kategori:[
 
     {
         kode:"T",
@@ -134,7 +120,7 @@ kategori:[
         nama:"Bahasa"
     }
 
-]
+    ],
         subkompetensi: []
     },
 
@@ -153,8 +139,7 @@ kategori:[
         kode:"B",
         nama:"Bahasa"
     }
-
-]
+    ],
         subkompetensi: []
     },
 
@@ -178,8 +163,7 @@ kategori:[
         kode:"F",
         nama:"Fisika"
     }
-
-]
+    ],
         subkompetensi: []
     }
 
