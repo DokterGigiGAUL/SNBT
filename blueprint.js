@@ -10,7 +10,43 @@ const blueprint = [
         id: "PU",
         nama: "Penalaran Umum",
 
-        subkompetensi: [
+        kategori:[
+
+        {
+
+            kode:"L",
+
+            nama:"Logika"
+
+        },
+
+        {
+
+            kode:"A",
+
+            nama:"Analitik"
+
+        },
+
+        {
+
+            kode:"D",
+
+            nama:"Diagram"
+
+        },
+
+        {
+
+            kode:"I",
+
+            nama:"Informasi"
+
+        }
+
+    ],
+
+    subkompetensi:[
 
             { id: "PU-L01", nama: "Logika Dasar" },
             { id: "PU-L02", nama: "Silogisme" },
@@ -53,16 +89,52 @@ const blueprint = [
     },
 
     {
-        id: "PM",
-        nama: "Penalaran Matematika",
+    id:"PM",
+    nama:"Penalaran Matematika",
 
-        subkompetensi: []
-    },
+    kategori:[
+
+        {
+            kode:"A",
+            nama:"Aljabar"
+        },
+
+        {
+            kode:"G",
+            nama:"Geometri"
+        },
+
+        {
+            kode:"S",
+            nama:"Statistika"
+        },
+
+        {
+            kode:"P",
+            nama:"Peluang"
+        }
+
+    ],
+
+    subkompetensi:[]
+},
 
     {
         id: "LI",
         nama: "Literasi Bahasa Indonesia",
+kategori:[
 
+    {
+        kode:"T",
+        nama:"Teks"
+    },
+
+    {
+        kode:"B",
+        nama:"Bahasa"
+    }
+
+]
         subkompetensi: []
     },
 
@@ -70,6 +142,19 @@ const blueprint = [
         id: "LB",
         nama: "Literasi Bahasa Inggris",
 
+        kategori:[
+
+    {
+        kode:"T",
+        nama:"Teks"
+    },
+
+    {
+        kode:"B",
+        nama:"Bahasa"
+    }
+
+]
         subkompetensi: []
     },
 
@@ -77,6 +162,24 @@ const blueprint = [
         id: "PI",
         nama: "Penalaran Ilmiah",
 
+        kategori:[
+
+    {
+        kode:"B",
+        nama:"Biologi"
+    },
+
+    {
+        kode:"K",
+        nama:"Kimia"
+    },
+
+    {
+        kode:"F",
+        nama:"Fisika"
+    }
+
+]
         subkompetensi: []
     }
 
