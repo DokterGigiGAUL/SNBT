@@ -1,7 +1,7 @@
 const resources = {
 
     "PU-L01": {
-        ringkasan: "",
+        ringkasan: "https://docs.google.com/document/d/e/2PACX-1vSq3-Xfhx5EWTqoVWoAAs0wk8jLcDikhewF_CcLXdbHQJL1V_iZGUWJsUHMN5d7HliXGl1sUMRUZLqA/pub",
         tips: "",
         contoh: ""
     },
