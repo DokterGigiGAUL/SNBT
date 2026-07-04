@@ -2,8 +2,8 @@ const resources = {
 
     "PU-L01": {
         ringkasan: "https://docs.google.com/document/d/e/2PACX-1vSq3-Xfhx5EWTqoVWoAAs0wk8jLcDikhewF_CcLXdbHQJL1V_iZGUWJsUHMN5d7HliXGl1sUMRUZLqA/pub",
-        tips: "",
-        contoh: ""
+        tips: "https://docs.google.com/document/d/e/2PACX-1vTH9CWAMILa8LMRjJUFEVVUvmEfBcoPbGxTxhyY-BiMcvKy9kYpoi18wHcVZbzlqKmjtE7UhgUTbOPz/pub",
+        contoh: "https://docs.google.com/document/d/e/2PACX-1vS3OCvxJF2SqoIckMjIsYlxmzrpmuFq7omUbYwLRiJuZzuQLwbmMXix2cVU3Kw_pWMf-PohvY14lOM9/pub"
     },
 
     "PU-L02": {
