@@ -184,7 +184,7 @@ function renderSubkompetensi(list){
             );
 
             window.location.href =
-            "ringkasan.html";
+            "subkompetensi.html";
 
         };
 
