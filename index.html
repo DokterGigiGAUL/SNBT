@@ -28,47 +28,5 @@
 <script src="data/users.js"></script>
 <script src="script.js"></script>
 
-    
-
-<pre id="output"></pre>
-
-<script src="blueprint.js"></script>
-
-<script>
-
-let hasil =
-"const resources = {\n\n";
-
-blueprint.forEach(k=>{
-
-    k.subkompetensi.forEach(item=>{
-
-        hasil +=
-`    "${item.id}": {
-
-        ringkasan: "",
-
-        tips: "",
-
-        contoh: ""
-
-    },
-
-`;
-
-    });
-
-});
-
-hasil +=
-"};";
-
-document
-.getElementById("output")
-.textContent = hasil;
-
-</script>
-
-
 </body>
 </html>
