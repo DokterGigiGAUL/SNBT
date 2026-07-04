@@ -54,4 +54,39 @@ function init(){
     materiNama.textContent =
     materi.nama;
 
+    document
+.getElementById("btnRingkasan")
+.onclick = () => {
+
+    window.location.href =
+    "ringkasan.html";
+
+};
+
+document
+.getElementById("btnTips")
+.onclick = () => {
+
+    window.location.href =
+    "tips.html";
+
+};
+
+document
+.getElementById("btnContoh")
+.onclick = () => {
+
+    window.location.href =
+    "contoh.html";
+
+};
+
+document
+.getElementById("btnLatihan")
+.onclick = () => {
+
+    window.location.href =
+    "latihan.html";
+
+};
 }
