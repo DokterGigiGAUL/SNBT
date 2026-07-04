@@ -197,3 +197,4 @@ const resources = {
         tips: "",
         contoh: ""
     },
+};
