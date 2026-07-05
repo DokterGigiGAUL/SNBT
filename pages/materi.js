@@ -76,8 +76,8 @@ function renderKategori(data){
 
     data.subkompetensi.forEach(item=>{
 
-        const kode=
-        item.id.split("-")[1][0];
+        const parts = item.id.split("-");
+        const kode = parts[parts.length - 1][0];
 
         if(!grup[kode]){
 
